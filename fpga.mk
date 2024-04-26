@@ -18,6 +18,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     config.disable_renderscript=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.apex.updatable=false \
     dalvik.vm.usejit=false \
     ro.hw_timeout_multiplier=8 \
     debug.drm.mode.force=640x480 \
@@ -51,11 +52,12 @@ PRODUCT_PACKAGES += \
 
 # hardware/interfaces
 PRODUCT_PACKAGES += \
+    hwservicemanager \
     android.hardware.graphics.allocator@2.0-service.fpga \
     android.hardware.graphics.mapper@2.0-impl.fpga \
     android.hardware.graphics.composer@2.1-service.fpga \
-    android.hardware.audio@4.0-impl \
-    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.service \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service \
